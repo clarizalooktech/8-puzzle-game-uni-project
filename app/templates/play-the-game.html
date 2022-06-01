@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <section id="play-the-game"> <!--START Play The Game Section-->
+                
+            <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+                <br>
+                <h2 class="text-title">Play The Game</h2>
+            </div>
+            
+            <div class="col-12 col-md-12 col-lg-12 col-xl-12 tab-content">
+                <div id="modal" class="hide">
+                    <div id="header"><button id="closeBtn" onclick="hideModal()">x</button></div>
+                    <h1 id="message">You won!</h1>
+                </div>
+                <div class="play-the-game-div {% if user_values is none %}is-disabled{% endif %}">
+                    <p class="play-the-game-disabled-text">You need to login to play the game.</p>
+                    <div class="row play-the-game-row">
+                        
+                        <div class="game-container">
+                            <span class="text-tab">
+                                Player: <span id="player-username"> {% if user_values is not none %}{{user_values.username}}{% else %}your_username{% endif %}</span>
+                            </span>
+
+                            <span class="text-tab"> 
+                                <div id="calendarBox">
+                                    <!-- OUTPUT TIME VALUES -->
+                                    <p class="timeDisplay">
+                                    <span id="minsOut">00:</span>
+                                    <span id="secsOut">00</span>
+                                    </p>
+                            
+                                    <!-- BUTTON SET -->
+                                    <!-- <input id="btnStart" type="button" value="Start Timer" /> -->
+                                    <input id="btnStop" type="button" value="Give Up" />
+
+                                    <form action="{{ url_for('others_data') }}" method="post">
+                                        <input id="btnStart" type="button" value="Start Timer" />
+                                    </form>
+                                    
+                                </div>
+                                
+                            </span>
+                            
+                            <span class="play-game-content"> <b>Make sure to start the timer and finish the game when you want your score to be recorded. </b></span>
+                        </div>
+                        <div id="game-container">
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="game-container">
+                            <a onClick="location.reload()" class="btn btn-primary game-refresh-button">Play A New Game</a>
+                        </div>                         
+                    </div>
+                </div>
+
+            </div>
+            <br>
+        </section> <!--End Play The Game Section-->
+
+
+    </div> <!-- END row-->
+</div> <!-- END OF CONTAINER-->
+
+
+{% endblock %}

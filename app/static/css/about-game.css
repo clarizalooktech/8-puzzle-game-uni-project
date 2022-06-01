@@ -1,0 +1,81 @@
+/*
+about game css 
+*/
+
+body {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  overflow-x: hidden;
+  background-color:  rgba(227, 227, 227, 0.7);
+  color: #6C6D6E;
+}
+
+a {
+  transition: all 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.8;
+}
+
+.primary-color {
+  color: #A36F55;
+}
+
+.page-container {
+  max-width: 600px;
+  width: 100%;  
+}
+
+.section {
+  margin-bottom: 155px;
+  position: relative;
+}
+
+.content-container {      
+  border-radius: 20px;
+  background-color: white;
+}
+
+.content {  
+  padding: 55px;
+}
+
+.header {
+  padding: 65px 15px;
+}
+
+.title {
+  font-size: 2rem;
+  color: #626364;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  color: #656667;
+}
+
+.img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;  
+}
+
+footer {
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  color: #9A9B9C;
+}
+
+.tm-footer-link {
+  color: #9A9B9C;
+}
+

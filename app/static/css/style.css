@@ -1,0 +1,278 @@
+.bg-dark {
+    background-color: #212529!important;
+    border-radius: 0.3rem;
+}
+
+body {
+    /* font-family: 'Crete Round', 'Georgia'; */
+    font-family: "Quicksand", sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: #7f7fd5;
+    /*background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);*/
+    background: linear-gradient(to right, #c6c6c6, #b1bdb4, #949995);
+
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin-block: 2rem;
+    gap: 2rem;
+}
+
+.text-title {
+    font-size: 2rem;
+    text-align:center;
+    color:  #626364;
+}
+
+
+
+/* Start of navbar */
+button:focus {
+    outline: 0;
+}
+
+.navbar .dropdown-menu .form-control {
+    width: 200px;
+}
+
+.navbar-collapse .navbar-nav .btn-primary {
+    color: rgba(255,255,255,.5);
+    background: none !important;
+    border: none !important;
+    text-decoration: underline;
+}
+
+.navbar-collapse .navbar-nav .btn {
+    padding: 0.17rem;
+
+}
+
+.form-group .btn-primary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+/* end of navbar */
+
+
+.tab-content {
+    border-radius: 0.4rem;
+    display: block;
+    background-color: rgba(227, 227, 227, 0.7);
+    padding: 1.4rem;
+
+}
+
+/*=====START OF PLAY GAME SECTION ======*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background-color: #114B5F;
+    text-align: center;
+    flex-direction: column;
+    padding-top: 2%;
+
+}
+
+.play-game-content{
+    font-size:.8rem;
+    font-style:italic;
+    color: #A36F55;
+
+}
+
+.game-container {
+    text-align:center;
+}
+
+#game-container {
+    width: 30rem;
+    height: 30rem;
+    margin:auto;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-evenly;
+    color: #E4FDE1;
+    padding-left: none !important;
+}
+ul li {
+    background: #5c7785;
+    width: 30%;
+    height: 150px;
+    border: 1px solid #028090;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 3rem;
+    border-radius: 0.4rem;
+}
+
+.empty {
+    background: #DAD4EF;
+    border: 2px solid #114B5F;
+}
+
+
+/* Modal styles */
+#modal {
+    width: 40%;
+    height: 300px;
+    background: #DE5360;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Sofia';
+}
+
+#modal #message {
+    color: #FDE1E3;
+    margin: 0;
+    font-size: 4rem;
+    text-align:center
+}
+
+.hide {
+    display: none;
+}
+#modal #header {
+    text-align: right;
+    padding: 5px 10px;
+}
+#modal #header button {
+    padding: 0.5rem;
+    background: #786363;
+    border-radius: 0.5rem;
+    color: #E4FDE1;
+    cursor: pointer;
+    border-color: #786363;
+    border:0px;
+}
+
+.game-refresh-button {
+    margin:2rem;
+    border: none;
+    background: #41a577;
+    color: #fff !important;
+}
+
+.text-tab {
+    padding:2rem;
+    font-size:1.5rem;
+}
+
+#btnStart {
+    font-size: 1rem;
+    color:#028090;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+}
+
+#btnStop {
+    font-size: 1rem;
+    color:#028090;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+}
+/*=====END OF PLAY GAME SECTION ======*/
+
+/*=====START CARD SECTION ======*/
+.card{
+    
+    border:2px solid gray;
+    padding:5px;
+    height:250px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card .score{
+    font-size:10px;
+}
+
+.card p{
+    font-size:10px;
+    margin-top:20px;
+}
+/*=====END CARD SECTION ======*/
+/*=====END CARD SECTION ======*/
+
+.play-the-game-div.is-disabled {
+    position: relative;
+    opacity: 60%;
+}
+
+.play-the-game-div.is-disabled::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: 1;
+}
+
+.play-the-game-disabled-text {  
+    display: none;   
+    color: #f00; 
+    font-style: italic;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    z-index: 2;
+}
+
+.play-the-game-div.is-disabled .play-the-game-disabled-text {   
+    display: block;
+}
+
+.play-the-game-row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#logout-button {
+    //display: none;
+}
+
+/* Hide login and register buttons when logged in */
+.is-logged-in button[data-target="#LoginModal"],
+.is-logged-in button[data-target="#RegisterModal"] {
+    display: none;
+}
+/* Show logout button when logged in */
+.is-logged-in #logout-button {
+    display: block;
+}
+
+/* Add is-active to the classname when current page */
+.navbar-nav .nav-link.is-active {
+    color: rgba(255,255,255,.75) !important;
+}

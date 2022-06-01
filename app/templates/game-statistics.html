@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row w-100">
+        <section id="game-statistics"> <!--START GAMES STATISTICS SECTION-->
+                
+            <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+                <br>
+                <h2 class="text-title">Game Statistics</h2>
+            </div>
+            <div class="col-12 col-md-12 col-lg-12 col-xl-12 tab-content">
+                <div class="row g-2 mt-2">
+                    {% for user in user_values %}
+                        {% if user.others is not none %}
+                        {% for stat in user.others %}
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img alt="winners logo" src="{{ url_for('static', filename = 'images/diamond-image.png') }}" width="70">
+                                    <h5 class="mb-4 mt-2">{{ user.username }}</h5>
+                                    <span class="score"><strong>{{ stat.time_display_final }}</strong> time taken to win</span>
+                                    <span class="score"><strong>{{ stat.drop_count_final }}</strong> number of moves to win</span>
+                                    <p>All above score is used in the games and apps</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+
+        </section>  <!--END Games Statistics Section-->
+
+
+    </div> <!---end row-->
+</div> <!---end container-->
+
+{% endblock %}
