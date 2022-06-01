@@ -45,26 +45,3 @@ Step: Run the tests.py on the command line
 Step: To test the web app, run the tests.py on the command line
 > python3 tests.py
 
-
-
-## Screenshots
-<center>*Home Page*</center>
-<br>
- <img align="center" alt="home-page" width="400px" src="https://github.com/clarizalooktech/8-puzzle-game-uni-project/blob/main/app/static/images/AA-image-home-page.JPG" />
-
-<center>*Register Page*</center>
-<br>
-
- <img align="center" alt="register-page" width="400px" src="https://github.com/clarizalooktech/8-puzzle-game-uni-project/blob/main/app/static/images/AA-image-register-page.JPG" />
- 
-<center>*Play The Game Page*</center>
-<br>
- <img align="center" alt="play-game-page" width="400px" src="https://github.com/clarizalooktech/8-puzzle-game-uni-project/blob/main/app/static/images/AA-image-play-the-game-page.JPG" />
-
-<center>*Game Statistics Page*</center>
-<br>
- <img align="center" alt="game-statistics-page" width="400px" src="https://github.com/clarizalooktech/8-puzzle-game-uni-project/blob/main/app/static/images/AA-image-game-stats-page.JPG" />
- 
-<center>*Login Page*</center>
-<br>
- <img align="center
