@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tile Swapping Game</title>
+
+    <!-- This is to make the Nav bar work-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- This is to make the modal work-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body onload="setUp()">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+        <div class="container-fluid">
+            <a href="#index.html" class="navbar-brand">Tile Swapping Game</a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <a href="#about-the-game" class="nav-item nav-link">About The Game</a>
+                    <a href="#play-the-game" class="nav-item nav-link">Play The Game</a>
+                    <a href="#game-statistics" class="nav-item nav-link">Game Statistics</a>
+                    <button class="btn btn-primary" id="logout-button">
+                        Logout
+                    </button>
+                    <!-- Button trigger modal -->
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#LoginModal">
+                        Login
+                    </button>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#RegisterModal">
+                        Register 
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal Log in -->
+    <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="LoginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="LoginModalLabel">Log In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form">
+
+                            <div class="form-group">
+                                <label class="sr-only" for="loginEmail">Email address</label>
+                                <input type="email" class="form-control" id="loginEmail" placeholder="Email address" required>
+                            </div>
+        
+                            <div class="form-group">
+                                <label class="sr-only" for="loginPassword">Password</label>
+                                <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+                                <div class="help-block text-right"><a href="">Forgot the password?</a></div>
+                            </div>
+        
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block" id="login-button">Sign in</button>
+                            </div>
+                            
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox"> keep me logged-in
+                                </label>
+                            </div>
+
+                        
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>                 
+                </div>
+            </div>
+        </div>
+    </div> <!-- END Modal Log in -->
+
+    <!-- Modal Register -->
+    <div class="modal fade" id="RegisterModal" tabindex="-1" role="dialog" aria-labelledby="RegisterModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="RegisterModalLabel">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form">
+
+                            <div class="form-group">
+                                <label class="sr-only" for="registerEmail">Email address</label>
+                                <input type="email" name="email" class="form-control" id="registerEmail" placeholder="Email address" required>
+                            </div>
+        
+                            <div class="form-group">
+                                <label class="sr-only" for="registerPassword">Password</label>
+                                <input type="password" name="password" class="form-control" id="registerPassword" placeholder="Password" required>
+                        
+                            </div>
+        
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block" id="register-button">Register</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>                 
+                </div>
+            </div>
+        </div>
+    </div> <!-- END Modal Register -->
+    
+    <div class="container">
+
+
+        <div class="row">
+            <section id="about-the-game">
+                
+                <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+                    <h2>Tile Swapping Game</h2>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-12 col-md-12 col-lg-12 col-xl-12 tab-content">
+                             <p>This lovely puzzle game will definitely become one of the favorites of the kids. The object of the game is to swap the positions of the tiles so that the correct numbering will be in place. </p>
+                             <p>When the game starts, the numbers are swapped in different boxes. Click any of the pieces to select it, then click an adjacent tile to swap the positions of the two pieces. Continue the process until the numbers are in the correct series.  </p>
+                             <p>The number of moves you have made and the amount of time you have spent will be counted on the two sides of the picture. Be the first one to accomplish the task among family and friends!	</p>
+                         </div>
+                                
+                    </div>
+                    <br>
+                  
+                </div>
+
+            </section> <!--End Instructions To About The Game Section-->
+            
+            <section id="play-the-game"> <!--START Play The Game Section-->
+                
+                <div class="col-12 col-md-12 col-lg-12 col-xl-12 ">
+                    <br>
+                    <h2>Play The Game</h2>
+                </div>
+                <div class="play-the-game-div is-disabled">
+                    <p class="play-the-game-disabled-text">You need to login to play the game.</p>
+                    <div class="row play-the-game-row">
+                        
+                        <div class="col-12 col-md-12 col-lg-12 col-xl-12 tab-content">
+                            <div class="game-container">
+                                <span class="text-tab">
+                                    Player: <span id="player-email">email@email.com</span>
+                                </span>
+                  
+                                <span class="text-tab"> 
+                                    <div id="calendarBox">
+                                        <!-- OUTPUT TIME VALUES -->
+                                        <p class="timeDisplay">
+                                          <span id="minsOut">00:</span>
+                                          <span id="secsOut">00</span>
+                                        </p>
+                                  
+                                        <!-- BUTTON SET -->
+                                        <input id="btnStart" type="button" value="Start Timer" />
+                                        <input id="btnStop" type="button" value="Stop Timer" />
+                                      </div>
+
+                                </span>
+                                
+                                <span>Make sure to start the timer and finish the game when you want your score to be recorded.</span>
+                            </div>
+
+                            <div id="modal" class="hide">
+                                <div id="header"><button id="closeBtn" onclick="hideModal()">x</button></div>
+                                <h1 id="message">You won!</h1>
+                            </div>
+                            <div id="game-container">
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="game-container">
+                                <button type="button" class="btn btn-primary game-refresh-button" id="play-again">Play A New Game</button>
+                            </div>
+                        </div>                              
+                    </div>
+                </div>
+                <br>
+            </section> <!--End Instructions To Play The Game Section-->
+
+
+            <section id="game-statistics"> <!--START GAMES STATISTICS SECTION-->
+                
+                <div class="col-12 col-md-12 col-lg-12 col-xl-12">
+                    <br>
+                    <h2>Game Statistics</h2>
+                </div>
+                <div class="col-12 col-md-12 col-lg-12 col-xl-12 tab-content">
+                    <div class="row g-2 mt-2">
+        
+                        <div class="col-md-4">
+                            
+                            <div class="card">
+                                <img src="https://i.imgur.com/Zzcgjbk.png" width="70">
+                                <h5 class="mb-0">Prismos</h5>
+                                <span class="score">5 Diamonds</span>
+                                <p>All above score is used in the games and apps</p>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="https://i.imgur.com/Zzcgjbk.png" width="90">
+                                <h5 class="mb-0">Harry</h5>
+                                <span class="score">10 Diamonds</span>
+                                <p>All above score is used in the games and apps</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            
+                            <div class="card">
+                                <img src="https://i.imgur.com/Zzcgjbk.png" width="70">
+                                <h5 class="mb-0">Joan</h5>
+                                <span class="score">8 Diamonds</span>
+                                <p>All above score is used in the games and apps</p>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            
+                            <div class="card">
+                                <img src="https://i.imgur.com/Zzcgjbk.png" width="70">
+                                <h5 class="mb-0">Trismos</h5>
+                                <span class="score">8 Diamonds</span>
+                                <p>All above score is used in the games and apps</p>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            
+                            <div class="card">
+                                <img src="https://i.imgur.com/Zzcgjbk.png" width="70">
+                                <h5 class="mb-0">Anna</h5>
+                                <span class="score">8 Diamonds</span>
+                                <p>All above score is used in the games and apps</p>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            
+                            <div class="card">
+                                <img src="https://i.imgur.com/Zzcgjbk.png" width="70">
+                                <h5 class="mb-0">Valerie</h5>
+                                <span class="score">8 Diamonds</span>
+                                <p>All above score is used in the games and apps</p>
+                            </div>
+                            
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+
+            </section>  <!--END GAMES STATISTICS SECTION-->
+
+            
+        </div> <!-- END row-->
+
+        <footer class="page-footer font-small blue pt-4"><!-- Footer -->
+            <div class="container-fluid text-center text-md-left ">
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3 text-dark">© 2022 Copyright:
+                    <a href="#index.html" class="text-dark"> TileSwappingGame.com</a>
+                    <a href="#about-the-game" class="text-dark">About The Game</a>
+                    <a href="#play-the-game" class="text-dark">Play The Game</a>
+                    <a href="#game-statistics" class="text-dark">Game Statistics</a>
+                </div>
+                <!-- Copyright -->
+            </div>
+        </footer>
+        <!-- Footer -->
+
+        
+    </div> <!-- END OF CONTAINER-->
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+    <script src="js/form.js"></script>
+</body>
