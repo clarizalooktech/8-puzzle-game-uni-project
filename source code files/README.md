@@ -82,7 +82,7 @@ Step 5: Run the run.py on the command line
 
 * Please note running the web app under incognito would be preferred.
 
-## Testing
+## Testing 
 Step: Run the tests.py on the command line
 #### Testing
 Step: To test the web app, run the tests.py on the command line
