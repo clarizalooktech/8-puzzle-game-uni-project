@@ -27,9 +27,6 @@ The players of 8 Puzzle Game is encouraged to rearrange the tiles so that they a
 
 The empty space cannot move diagonally and can take only one step at a time (i.e. move the empty space one position at a time).
 
-You can read more about solving the 8-Puzzle problem [here](https://www.geeksforgeeks.org/8-puzzle-problem-using-branch-and-bound/).
-
-
 ### How to check if the 8 puzzle is solvable?
 
 As the objective is to place the numbers on tiles in order using the empty space. There is one simple rule to check if a 8 puzzle is solvable. It is impossible to solve an instance of 8 puzzle if number of inversions is odd in the input state.
